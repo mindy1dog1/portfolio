@@ -11,5 +11,5 @@ export default defineConfig({
 
     ],
     base: "/portfolio",
-    
+    assetsInclude: ['**/*.glb', '**/*.gltf']
   })
