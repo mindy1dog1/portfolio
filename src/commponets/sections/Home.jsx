@@ -12,7 +12,7 @@ export const Home = () => {
         <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-righ">Hi, I'm Jonathan Elliott</h1>
 
         <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-        I'm a Computer infuence developer who loves digital media, game applications. My goal is to Find a workaround in probloms
+        Digital media background now pivoting into cybersecurity, actively seeking internship opportunities.
     </p>
 
     <div className="flex justify-center space-x-4">

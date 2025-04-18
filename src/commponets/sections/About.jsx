@@ -2,8 +2,8 @@ import { RevealOnScroll } from "../RevelOnScroll";
 
 export const About = () => {
 
-    const SkillOne = ["Premiere Pro", "After Effects", "Photoshop"];
-    const skillTwo = ["React", "TypeScript", "Tailwindcss", "JavaScript", "python", "node.js"];
+    const Adobe = ["Premiere Pro", "After Effects", "Photoshop 📜", "illustrator"];
+    const Coding = ["React", "TypeScript", "Tailwindcss", "JavaScript", "python"];
    
 
     return <section id="about" className="min-h-screen flex items-center justify-center py-20">
@@ -15,20 +15,20 @@ export const About = () => {
 
             <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-1  transition-all">
                 <p className="text-gray-300 mb-6 ">
-                Passionate computer media and developer, building fun projects across the board and creating innovative solutions.
+                I have a background in digital media, with experience using Adobe Creative Suite and some familiarity with coding. While I’ve learned a lot in the creative field, I’m now shifting my focus toward cybersecurity. I’m currently building my skills and aiming to gain hands-on experience through an internship in the cybersecurity industry.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="rounded-xl p-6 hover:-translate-y-1  transition-all">
-                        <h3 className="text-xl font-bold mb-4"> Skill One </h3>
-                        <div className="flex flex-wrap gap-2">{SkillOne.map((tech, key) => (<span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rbga[(49, 130, 246, 0.2)] transition">{tech} </span>))}</div>
+                        <h3 className="text-xl font-bold mb-4"> Adobe Creative Cloud Suite </h3>
+                        <div className="flex flex-wrap gap-2">{Adobe.map((tech, key) => (<span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rbga[(49, 130, 246, 0.2)] transition">{tech} </span>))}</div>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="rounded-xl p-6 hover:-translate-y-1  transition-all">
-                        <h3 className="text-xl font-bold mb-4"> Skill Two </h3>
-                        <div className="flex flex-wrap gap-2">{skillTwo.map((tech, key) => (<span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rbga[(49, 130, 246, 0.2)] transition">{tech} </span>))}</div>
+                        <h3 className="text-xl font-bold mb-4"> Coding </h3>
+                        <div className="flex flex-wrap gap-2">{Coding.map((tech, key) => (<span key={key} className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rbga[(49, 130, 246, 0.2)] transition">{tech} </span>))}</div>
                     </div>
                 </div>
             </div>
@@ -38,10 +38,10 @@ export const About = () => {
                     <h3 className="text-xl font-bold mb-4">🏫 Education </h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2">
                         <li>
-                            <strong> Degree one </strong> xyz University (2026-2028)
+                            <strong> Cybersecurity </strong> Moraine Park Technical College (2025-Present)
                         </li>
                         <li>
-                            <strong> Drelevent Coursework:</strong> Item one, item two, item three
+                            <strong> Cybersecurity Coursework:</strong> To Be Seen
                         </li>
                     </ul>
                 </div>
@@ -50,13 +50,18 @@ export const About = () => {
                     <h3 className="text-xl font-bold mb-4">💼 Work Experience </h3>
                     <div className="space-y-4 text-gray-300">
                         <div>
-                            <h4> Job area at ABC corp (2025- Present)</h4>
-                            <p>Worked on ABX for XYZ applications</p>
-
-                            <h4> Intern at DEF corp (2020)</h4>
-                            <p>Worked on ABX for XYZ applications</p>
+                            <h4> None (Present)</h4>
+                            <p> idk soon tho</p>
                         </div>
                     </div>
+                </div>
+
+                <div className="flex justify-center space-x-4">
+                    <a href="#about2" className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">
+                         Dig deep
+                    </a>
+
+                    
                 </div>
             </div>
         </div>
