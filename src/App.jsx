@@ -33,16 +33,17 @@ function App() {
   }
 
   return (
-    <Router basename="/portfolio"> {/* basename still fine if you want! */}
+    <Router>
+    {/* Wrap your entire app in ErrorBoundary to catch errors in the whole tree */}
       <Navbar menuOpen={menuOpen} SetMenuOpen={setMenuOpen} />
       <MobleMenu menuOpen={menuOpen} SetMenuOpen={setMenuOpen} />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/about" element={<About2 />} /> {/* lowercase */}
+        <Route path="/about" element={<About2 />} />
         <Route path="/photography" element={<SportsPhotography />} />
         <Route path="/announcement" element={<AnnouncementIntoPage />} />
       </Routes>
-    </Router>
+      </Router>
   );
 }
 

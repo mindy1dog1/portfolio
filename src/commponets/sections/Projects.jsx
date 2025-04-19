@@ -2,22 +2,40 @@ import { useState } from "react";
 import { RevealOnScroll } from "../RevelOnScroll";
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
+import confetti from "canvas-confetti";
+import { Link } from "react-router-dom";
+
 
 export const Projects = () => {
-  const [viewpprStat, setViewpprStat] = useState(false);
-  const [Viewppr, setViewppr] = useState(" View Project →");
-
-  const eseteregg = () => {
-    if (viewpprStat == false) {
-      setViewpprStat(true);
-      setViewppr(" It me tho! ");
-      
-      setTimeout(() => {
-        setViewpprStat(false);
-        setViewppr(" View Project → ");
-      }, 1000);
-    }
-  };
+    const [viewpprStat, setViewpprStat] = useState(false);
+    const [Viewppr, setViewppr] = useState(" View Project →");
+  
+    const eseteregg = () => {
+      if (!viewpprStat) {
+        setViewpprStat(true);
+        setViewppr(" It me tho! ");
+        
+        // 🎉 Crazy Confetti Explosion - Random bursts across the screen!
+        for (let i = 0; i < 5; i++) {
+          setTimeout(() => {
+            confetti({
+              particleCount: 25,
+              spread: 360,
+              origin: {
+                x: Math.random(), // Random X
+                y: Math.random() - 0.2 // Random Y, slightly higher origin
+              }
+            });
+          }, i * 200); // Delay between each burst
+        }
+  
+        setTimeout(() => {
+          setViewpprStat(false);
+          setViewppr(" View Project → ");
+        }, 1500); // Adjust time so confetti lasts for a moment
+      }
+    };
+  
 
   return (
     <section id="projects" className="min-h-screen flex items-center justify-center py-20">
@@ -65,7 +83,10 @@ export const Projects = () => {
                                 ))}
                             </div>
                             <div className="flex justify-between items-center">
-                                <a href="/portfolio/announcement" className="text-blue-400 hover:text-blue-300 transition-colors my-4">View Project →</a>
+                            <Link to="/announcement" className="text-blue-400 hover:text-blue-300 transition-colors my-4">
+                                View Project →
+                            </Link>
+
                             </div>
                         </motion.div>
 
@@ -92,7 +113,9 @@ export const Projects = () => {
                                 ))}
                             </div>
                             <div className="flex justify-between items-center">
-                                <a href="/portfolio/photography" className="text-blue-400 hover:text-blue-300 transition-colors my-4">View Project →</a>
+                                <Link to="/photography" className="text-blue-400 hover:text-blue-300 transition-colors my-4">
+                                    View Project →
+                                </Link>
                             </div>
                         </motion.div>
 

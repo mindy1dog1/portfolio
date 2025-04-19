@@ -16,6 +16,7 @@
     "@emailjs/browser": "^4.4.1",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/vite": "^4.1.4",
+    "canvas-confetti": "^1.9.3",
     "emailjs-com": "^3.2.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
