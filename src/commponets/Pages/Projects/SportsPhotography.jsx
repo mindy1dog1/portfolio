@@ -20,11 +20,11 @@ export const SportsPhotography = () => {
 
   // An array of image URLs for the gallery (replace with your actual image paths)
   const images = [
-    'public/Photos/_DSC8810.png',
-    'public/Photos/bbl-motion-blur.png',
-    'public/Photos/DSC_3956.png',
-    'public/Photos/IMG_9588.PNG',
-    'public/Photos/vollyball.png',
+    '/Photos/_DSC8810.png',
+    '/Photos/bbl-motion-blur.png',
+    '/Photos/DSC_3956.png',
+    '/Photos/IMG_9588.PNG',
+    '/Photos/vollyball.png',
   ];
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
