@@ -25,7 +25,7 @@ export const Projects = () => {
         <div className="max-w-5xl mx-auto px-4">
           
           {/* TYPEWRITER TITLE */}
-          <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400  text-center">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-white bg-clip-text text-transparent text-center">
             <Typewriter
               words={['Featured Projects', 'Cool Stuff I Built', 'Fun Side Quests ✨']}
               loop={false}
