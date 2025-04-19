@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom"; // 👈 changed here
 import { useState, useEffect } from 'react';
 import Lenis from "@studio-freight/lenis";
 
@@ -28,31 +28,17 @@ function App() {
     }
   }, []);
 
-  // ...your existing Router and content
-
-  useEffect(() => {
-    // Only run once when app first mounts
-    const timer = setTimeout(() => {
-      setIsLoaded(true);
-    }, 2000); // fake 2s load time or however long you want
-
-    return () => clearTimeout(timer);
-  }, []);
-
   if (!isLoaded) {
-    // Only show LoadingScreen at first
     return <LoadingScreen onCompleate={() => setIsLoaded(true)} />;
-
-    
   }
 
   return (
-    <Router basename="/portfolio">
+    <Router basename="/portfolio"> {/* basename still fine if you want! */}
       <Navbar menuOpen={menuOpen} SetMenuOpen={setMenuOpen} />
       <MobleMenu menuOpen={menuOpen} SetMenuOpen={setMenuOpen} />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/About" element={<About2 />} />
+        <Route path="/about" element={<About2 />} /> {/* lowercase */}
         <Route path="/photography" element={<SportsPhotography />} />
         <Route path="/announcement" element={<AnnouncementIntoPage />} />
       </Routes>
