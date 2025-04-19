@@ -1,6 +1,13 @@
+import img1 from "./Photos/DSC8810.png"
+import img2 from "./Photos/IMG_9588.PNG"
+import img3 from "./Photos/vollyball.png"
+import img4 from "./Photos/bbl-motion-blur.png"
+import img5 from "./Photos/DSC_3956.png"
+
 import React, { useState, useEffect } from 'react';
 import { RevealOnScroll } from "../../RevelOnScroll";
 import { useNavigate } from 'react-router-dom'; // Importing useNavigate
+
 
 export const SportsPhotography = () => {
 
@@ -19,13 +26,7 @@ export const SportsPhotography = () => {
 
 
   // An array of image URLs for the gallery (replace with your actual image paths)
-  const images = [
-    '/Photos/_DSC8810.png',
-    '/Photos/bbl-motion-blur.png',
-    '/Photos/DSC_3956.png',
-    '/Photos/IMG_9588.PNG',
-    '/Photos/vollyball.png',
-  ];
+  const images = [img1, img2, img3, img4, img5];
   const [selectedImage, setSelectedImage] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
 
