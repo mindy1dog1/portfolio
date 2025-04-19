@@ -44,3 +44,17 @@ html, body{
   opacity: 1;
   transform: translateY(0);
 }
+
+.text-shadow-md {
+  text-shadow: 0 0 5px rgba(0, 191, 255, 0.8), 0 0 15px rgba(0, 191, 255, 0.6);
+}
+
+@keyframes gradientShiftFast {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.animate-gradient-fast {
+  background-size: 200% 200%;
+  animation: gradientShiftFast 2s ease infinite;
+}

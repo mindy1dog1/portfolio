@@ -1,8 +1,14 @@
 import { RevealOnScroll } from "../RevelOnScroll";
+import { useEffect } from "react"
 
-export const About = () => {
+export const About = ({aboutOpen, SetAboutOpen}) => {
 
-    const Adobe = ["Premiere Pro", "After Effects", "Photoshop 📜", "illustrator"];
+    useEffect(() => {
+            document.body.style.overflow = aboutOpen ? "hidden" : ""
+        })
+    
+
+    const Adobe = ["Premiere Pro", "After Effects", "Photoshop 📃", "illustrator"];
     const Coding = ["React", "TypeScript", "Tailwindcss", "JavaScript", "python"];
    
 
@@ -35,7 +41,7 @@ export const About = () => {
 
             <div className="grid grid-cols-1 mb:grid-cols-2 gap-6 mt-8">
                 <div className="p-6  rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4">🏫 Education </h3>
+                    <h3 className="text-xl font-bold mb-4"><span className="bg-white bg-clip-text text-transparent">🍎</span> Education </h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2">
                         <li>
                             <strong> Cybersecurity </strong> Moraine Park Technical College (2025-Present)
@@ -47,7 +53,7 @@ export const About = () => {
                 </div>
 
                 <div className="p-6  rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
-                    <h3 className="text-xl font-bold mb-4">💼 Work Experience </h3>
+                    <h3 className="text-xl font-bold mb-4"><span className="bg-white bg-clip-text text-transparent">💼</span> Work Experience </h3>
                     <div className="space-y-4 text-gray-300">
                         <div>
                             <h4> None (Present)</h4>
@@ -57,7 +63,7 @@ export const About = () => {
                 </div>
 
                 <div className="flex justify-center space-x-4">
-                    <a href="#about2" className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">
+                    <a onClick={() => SetAboutOpen((prev) => !prev)} className="border border-blue-500/50 text-blue-500 py-3 px-6 rounded font-medium transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_0_15px_rgba(59, 130, 246, 0.2)] hover:bg-blue-500/10">
                          Dig deep
                     </a>
 
