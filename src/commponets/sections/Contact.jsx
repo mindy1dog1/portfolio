@@ -68,7 +68,7 @@ export const Contact = () => {
                   setMessageLength(e.target.value.length); // Update message length
                 }}
               />
-              {messageLength <= 500 && (
+              {messageLength >= 500 && (
                 <div className={`absolute bottom-2 right-2 text-sm font-semibold ${messageLength >= 900 ? 'text-red-500' : 'text-white'} z-0`}>
                   {1000 - messageLength} characters left
                 </div>
